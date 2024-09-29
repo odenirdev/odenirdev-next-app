@@ -17,9 +17,7 @@ export const ContactModal = (props: ContactModalProps) => {
 
         <Dialog.Content className="space-y-4 max-w-xl">
           <header className="flex items-center justify-between border-b pb-3">
-            <Dialog.Title className="text-2xl">
-              Odenir Gomes
-            </Dialog.Title>
+            <Dialog.Title className="text-2xl">Odenir Gomes</Dialog.Title>
 
             <Dialog.Close />
           </header>
@@ -37,7 +35,11 @@ export const ContactModal = (props: ContactModalProps) => {
                   <Typography as="span" className="text-sm">
                     E-mail
                   </Typography>
-                  <a href="">
+                  <a
+                    href="mailto:odenirdev@gmail.com"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <Typography as="span">odenirdev@gmail.com</Typography>
                   </a>
                 </div>
@@ -49,7 +51,11 @@ export const ContactModal = (props: ContactModalProps) => {
                   <Typography as="span" className="text-sm">
                     Linkedin
                   </Typography>
-                  <a href="">
+                  <a
+                    href="https://www.linkedin.com/in/odenirdev/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <Typography as="span">linkedin.com/in/odenirdev</Typography>
                   </a>
                 </div>
@@ -61,7 +67,11 @@ export const ContactModal = (props: ContactModalProps) => {
                   <Typography as="span" className="text-sm">
                     Github
                   </Typography>
-                  <a href="">
+                  <a
+                    href="https://github.com/odenirdev"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <Typography as="span">github.com/odenirdev</Typography>
                   </a>
                 </div>
