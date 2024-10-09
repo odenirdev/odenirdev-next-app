@@ -1,15 +1,47 @@
 import { Typography } from "@/components/atoms/Typography";
+import { HeroCard } from "@/components/organisms/HeroCard";
 import { ContactModal } from "@/components/templates/ContactModal";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import Slider from "react-slick";
 
 export default function Home() {
   const [openContactModal, setOpenContactModal] = useState(false);
 
   const handleOpenContactModalChange = (value: boolean) => {
     setOpenContactModal(value);
+  };
+
+  const settings = {
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -81,31 +113,64 @@ export default function Home() {
             </Typography>
 
             <section>
-              <Typography as="p">👋🏾 Olá, meu nome é Odenir Gomes.</Typography>
-              <br />
               <Typography as="p">
-                Sou Desenvolvedor de Software e Entusiasta de Educação em
-                Tecnologia, crio conteúdo sobre programação e ajudo iniciantes a
-                entrar na área.
+                👋🏾 Olá, meu nome é Odenir Gomes. É um prazer conhecê-lo!
               </Typography>
               <br />
               <Typography as="p">
-                Escrevo e compartilho artigos por meio da plataforma que criei a
-                Open-source Courses. Estudo programação desde 2017, me formei em
-                Análise e Desenvolvimento de Sistemas pelo Instituto Federal de
-                São Paulo(IFSP). Também, atuei como professor de lógica de
-                programação na ONG Ampliar.
+                Sou Desenvolvedor de Software com mais de 5 anos de experiência,
+                especializado em desenvolvimento web. Tenho uma sólida formação
+                em Análise e Desenvolvimento de Sistemas pelo Instituto Federal
+                de São Paulo (IFSP) e uma trajetória diversificada, que inclui
+                tanto a criação e compartilhamento de conteúdos técnicos na
+                plataforma Open-source Courses quanto a atuação como professor
+                de lógica de programação na ONG Ampliar.
               </Typography>
               <br />
               <Typography as="p">
-                Atualmente, sou líder no desenvolvimento de software na Intuix
-                Tecnologia, empresa especializada em compliance e auditoria.
+                Atualmente, lidero o desenvolvimento de software na Intuix
+                Tecnologia, empresa especializada em compliance e auditoria,
+                desde fevereiro de 2021. Minhas principais especialidades
+                incluem ReactJS, NodeJS, JavaScript e AWS, além de habilidades
+                em arquitetura de sistemas e gestão de equipes.
               </Typography>
               <br />
               <Typography as="p">
                 💬 Fique à vontade para entrar em contato
               </Typography>
               <Typography as="p">✉️ odenirdev@gmail.com</Typography>
+            </section>
+          </section>
+
+          <section className="max-w-3xl mx-auto bg-white rounded-2xl overflow-hidden shadow-lg px-8 py-6 space-y-2">
+            <Typography as="h2" className="text-xl font-bold">
+              Em destaque
+            </Typography>
+
+            <section className="hero-carousel">
+              <Slider {...settings}>
+                <div>
+                  <HeroCard
+                    title="Open-source Courses"
+                    description="Plataforma opensource de educação em tecnologia"
+                    href="https://github.com/opensource-courses/courses"
+                    target="_blank"
+                    rel="noreferrer"
+                    image="/opensource-courses.jpg"
+                  />
+                </div>
+
+                <div>
+                  <HeroCard
+                    title="Dev Dynamos"
+                    description="Equipe de desenvolvedores de software"
+                    href=""
+                    target="_blank"
+                    rel="noreferrer"
+                    image="/dev-dynamos.jpg"
+                  />
+                </div>
+              </Slider>
             </section>
           </section>
 
