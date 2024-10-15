@@ -15,12 +15,12 @@ export const HeroCard = (props: HeroCardProps) => {
   return (
     <Link
       {...rest}
-      className="block w-72 shadow-sm rounded-2xl overflow-hidden border border-gray-200"
+      className="block w-full shadow-sm rounded-2xl overflow-hidden border border-gray-200 outline-none"
     >
       <Image
-        width={256}
-        height={144}
-        className="h-36 w-full object-contain object-center"
+        width={524}
+        height={1048}
+        className="h-64 w-full object-cover object-center"
         src={image}
         alt=""
       />

@@ -26,6 +26,13 @@ a {
   @apply text-blue-500;
 }
 
+.slick-list {
+  margin: 0 -0.5rem;
+}
+.slick-slide > div {
+  padding: 0 0.5rem;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

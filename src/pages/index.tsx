@@ -5,7 +5,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import Slider from "react-slick";
+import Slider, { Settings as SliderSettings } from "react-slick";
 
 export default function Home() {
   const [openContactModal, setOpenContactModal] = useState(false);
@@ -14,34 +14,14 @@ export default function Home() {
     setOpenContactModal(value);
   };
 
-  const settings = {
+  const settings: SliderSettings = {
+    infinite: false,
     speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 2,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+    centerPadding: "64px",
+    centerMode: true,
   };
 
   return (
