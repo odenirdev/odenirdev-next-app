@@ -38,3 +38,19 @@ a {
     text-wrap: balance;
   }
 }
+
+.react-markdown h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: revert;
+  font-weight: revert;
+
+  @apply border-b border-gray-300 leading-normal mb-4 mt-2;
+}
+
+.react-markdown p + p {
+  @apply mt-2;
+}
