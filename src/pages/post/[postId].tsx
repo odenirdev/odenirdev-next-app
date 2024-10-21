@@ -22,31 +22,39 @@ const Post = ({ post }: PostProps) => {
   }
 
   return (
-    <main className="w-full h-screen p-4 space-y-4">
-      <div className="max-w-3xl mx-auto bg-white rounded-2xl overflow-hidden shadow-lg">
-        <div className="w-full h-44">
-          <Image
-            width={1920}
-            height={1080}
-            src="/banner.jpg"
-            alt=""
-            className="w-full h-full object-cover"
-          />
-        </div>
+    <div className="w-full min-h-screen bg-[url('/background.svg')] bg-fixed">
+      <main className="p-4 space-y-4">
+        <div className="max-w-3xl mx-auto bg-white rounded-2xl overflow-hidden shadow-lg">
+          <div className="w-full h-44">
+            <Image
+              width={1920}
+              height={1080}
+              src="/banner.jpg"
+              alt=""
+              className="w-full h-full object-cover"
+            />
+          </div>
 
-        <div className="px-8 py-8 space-y-2">
-          <Typography as="h1" className="text-2xl font-bold leading-loose">
-            {post.title}
-          </Typography>
-          <ReactMarkdown
-            remarkPlugins={[remarkGfm, remarkHtml]}
-            className="react-markdown" // Use classes do Tailwind para estilizar o conteúdo
-          >
-            {post.body}
-          </ReactMarkdown>
+          <div className="px-8 py-8 space-y-2">
+            <Typography as="h1" className="text-2xl font-bold leading-loose">
+              {post.title}
+            </Typography>
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm, remarkHtml]}
+              className="react-markdown" // Use classes do Tailwind para estilizar o conteúdo
+            >
+              {post.body}
+            </ReactMarkdown>
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+
+      <footer className="flex justify-center py-4">
+        <Typography as="h2" className="text-xs text-gray-400">
+          Odenir Gomes Soluções &copy; 2024
+        </Typography>
+      </footer>
+    </div>
   );
 };
 

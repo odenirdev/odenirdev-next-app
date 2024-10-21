@@ -1,9 +1,7 @@
 import Image from "next/image";
 import { Typography } from "../atoms/Typography";
-import Link from "next/link";
-import { ComponentProps } from "react";
 
-type HeroCardProps = ComponentProps<typeof Link> & {
+type HeroCardProps = {
   title: string;
   description: string;
   image: string;
@@ -13,7 +11,7 @@ export const HeroCard = (props: HeroCardProps) => {
   const { title, description, image, ...rest } = props;
 
   return (
-    <Link
+    <section
       {...rest}
       className="block w-full shadow-sm rounded-2xl overflow-hidden border border-gray-200 outline-none"
     >
@@ -42,6 +40,6 @@ export const HeroCard = (props: HeroCardProps) => {
           </Typography>
         </div>
       </section>
-    </Link>
+    </section>
   );
 };

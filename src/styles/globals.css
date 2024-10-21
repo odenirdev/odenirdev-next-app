@@ -40,11 +40,11 @@ a {
 }
 
 .react-markdown h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.react-markdown h2,
+.react-markdown h3,
+.react-markdown h4,
+.react-markdown h5,
+.react-markdown h6 {
   font-size: revert;
   font-weight: revert;
 

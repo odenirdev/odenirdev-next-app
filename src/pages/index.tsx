@@ -32,8 +32,9 @@ export default function Home() {
           educação em tecnologia
         </title>
       </Head>
-      <div>
-        <main className="w-full h-screen p-4 space-y-4">
+
+      <div className="w-full min-h-screen bg-[url('/background.svg')] bg-fixed">
+        <main className="p-4 space-y-4">
           <header className="max-w-3xl mx-auto bg-white rounded-2xl overflow-hidden shadow-lg">
             <div className="w-full h-44">
               <Image
@@ -130,36 +131,40 @@ export default function Home() {
             <section className="hero-carousel">
               <Slider {...settings}>
                 <div>
-                  <HeroCard
-                    title="Open-source Courses"
-                    description="Plataforma opensource de educação em tecnologia"
-                    href="https://github.com/opensource-courses/courses"
-                    target="_blank"
-                    rel="noreferrer"
-                    image="/opensource-courses.jpg"
-                  />
+                  <Link href="/post/1" rel="noreferrer">
+                    <HeroCard
+                      title="Open-source Courses"
+                      description="Plataforma opensource de educação em tecnologia"
+                      image="/opensource-courses.jpg"
+                    />
+                  </Link>
                 </div>
 
                 <div>
-                  <HeroCard
-                    title="Dev Dynamos"
-                    description="Equipe de desenvolvedores de software"
-                    href=""
-                    target="_blank"
-                    rel="noreferrer"
-                    image="/dev-dynamos.jpg"
-                  />
+                  <Link href="/post/2" rel="noreferrer">
+                    <HeroCard
+                      title="Dev Dynamos"
+                      description="Equipe de desenvolvedores de software"
+                      image="/dev-dynamos.jpg"
+                    />
+                  </Link>
                 </div>
               </Slider>
             </section>
           </section>
 
-          <footer className="flex justify-center py-4">
-            <Typography as="h2" className="text-xs text-gray-400">
-              Odenir Gomes Soluções &copy; 2024
+          {/* <section className="max-w-3xl mx-auto bg-white rounded-2xl overflow-hidden shadow-lg px-8 py-6 space-y-2">
+            <Typography as="h2" className="text-xl font-bold">
+              Experiência
             </Typography>
-          </footer>
+          </section> */}
         </main>
+
+        <footer className="flex justify-center py-4">
+          <Typography as="h2" className="text-xs text-gray-400">
+            Odenir Gomes Soluções &copy; 2024
+          </Typography>
+        </footer>
       </div>
 
       <ContactModal
