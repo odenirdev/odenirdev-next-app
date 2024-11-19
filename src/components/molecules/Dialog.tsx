@@ -24,7 +24,7 @@ export const Dialog = {
   }: ComponentProps<typeof DialogPrimitive.Overlay>) => (
     <DialogPrimitive.Overlay
       {...props}
-      className="fixed inset-0 bg-[rgba(0,0,0,0.5)]"
+      className="fixed inset-0 bg-[rgba(0,0,0,0.5)] z-[999]"
     >
       {children}
     </DialogPrimitive.Overlay>
@@ -38,7 +38,7 @@ export const Dialog = {
     <DialogPrimitive.Content
       {...props}
       className={twMerge(
-        "bg-white fixed top-[50%] left-[50%] max-h-[85vh] w-[90vw] translate-x-[-50%] translate-y-[-50%] rounded-2xl p-6",
+        "bg-white fixed top-[50%] left-[50%] max-h-[85vh] w-[90vw] translate-x-[-50%] translate-y-[-50%] rounded-2xl p-6 z-[9999]",
         className
       )}
     >

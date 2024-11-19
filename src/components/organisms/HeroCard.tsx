@@ -13,7 +13,7 @@ export const HeroCard = (props: HeroCardProps) => {
   return (
     <section
       {...rest}
-      className="block w-full shadow-sm rounded-2xl overflow-hidden border border-gray-200 outline-none"
+      className="block shadow-sm rounded-2xl overflow-hidden border border-gray-200 outline-none"
     >
       <Image
         width={524}
